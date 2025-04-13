@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educa Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="profile1">
+            <img src="OIP.jpeg" class="image" alt="">
+            <h3 class="name">Rehab Kamal</h3>
+            <p class="role">student</p>
+            <a href="profile.html" class="inline-btn" >view profile</a>
+        </div>
+        <ul>
+            <li onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home </li>
+            <li><i class="fas fa-question-circle"></i> About</li>
+            <li class="active" onclick="window.location.href='courses.html'"><i class="fas fa-graduation-cap"></i> Courses</li>
+            <li  class="active" onclick="window.location.href='quize/Quize.html'" ><i class="fas fa-chalkboard-teacher"></i> Exam</li>
+            <li><i class="fas fa-headset"></i> Contact Us</li>
+        </ul>
+
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>Educa.</h2>
+            <input type="text" placeholder="Search courses..." id="Search">
+            <div class="icons">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-user-cog" id="profileToggle"></i>
+                <i class="fas fa-cog" id="darkModeToggle"></i>
+            </div>
+            <div class="profile-dropdown" id="userProfile">
+                <img src="OIP.jpeg" class="image" alt="" style="width: 80px; height: 80px; object-fit: cover;">
+                <h3 class="name">Rehab Kamal</h3>
+                <p class="role">student</p>
+                <a href="profile.html" class="inline-btn">View Profile</a>
+                <div class="inline-btn">
+                    <a href="login.html" >Login</a>
+                    <a href="register.html" >Register</a>
+                </div>
+            </div>
+        </header>  
+
+        <section class="courses">
+            <h3>Our Courses</h3>
+            <div class="course">
+                <img src="R.jpeg" alt="web design">
+                <p>Web Design</p>
+                <h5 style="color:brown">2 videos</h5>
+
+            <a href="playlist.html" class="inline-btn">view playlist</a>
+         </div>
+               
+
+            <div class="course">
+                <img src="Código-Python.webp" alt="php">
+                <p>PHP</p>
+                <h5 style="color:brown">2 videos </h5>
+                <a href="playlist.html" class="inline-btn">view playlist</a>
+             </div>
+            <div class="course">
+                <img src="R (2).jpeg" alt="php">
+                <p>Java</p>
+                <h5 style="color:brown">2 videos </h5>
+            <a href="playlist.html" class="inline-btn">view playlist</a>
+         </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <p style="height: 5px; flex-direction: row;">&copy; 2022 by <span style="color: red;">Mr. Web
+                    Designer</span> | All rights reserved.</p>
+        </footer>
+        <script src="script2.js">
+        </script>
+   
+</body>
+</html>
