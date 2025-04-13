@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educa - Online Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --success-color: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .main-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .stats-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .stats-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stats-card p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .stats-card .subtext {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .topics-list, .courses-list {
+            list-style: none;
+        }
+        
+        .topics-list li, .courses-list li {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: var(--light-color);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .topics-list li:hover, .courses-list li:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Educa.</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2 class="section-title">Likes And Comments</h2>
+                
+                <div class="stats-card">
+                    <h3>Total likes</h3>
+                    <p>25</p>
+                    <div class="subtext">New Lists</div>
+                </div>
+                
+                <div class="stats-card">
+                    <h3>Total comments</h3>
+                    <p>12</p>
+                    <div class="subtext">New Comments</div>
+                </div>
+                
+                <div class="stats-card">
+                    <h3>Saved playlists</h3>
+                    <p>4</p>
+                    <div class="subtext">New Playlists</div>
+                </div>
+                
+                <h2 class="section-title" style="margin-top: 30px;">Popular Topics</h2>
+                <ul class="topics-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <h2 class="section-title">Our Courses</h2>
+                <ul class="courses-list">
+                    <li>HTML</li>
+                    <li>Python</li>
+                    <li>XML</li>
+                    <li>Web Design</li>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>Voxel Playlist</li>
+                    <li>Voxel Playlist</li>
+                    <li>Voxel Playlist</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            © 2022 by Mr. Web Designer | All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Add interactivity
+        document.querySelectorAll('.topics-list li, .courses-list li').forEach(item => {
+            item.addEventListener('click', function() {
+                alert(`You selected: ${this.textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>
